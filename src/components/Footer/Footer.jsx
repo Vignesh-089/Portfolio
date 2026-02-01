@@ -17,7 +17,6 @@ import { motion } from 'framer-motion';
 import { keyframes } from '@emotion/react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import EmailIcon from '@mui/icons-material/Email';
@@ -29,12 +28,6 @@ import CoffeeIcon from '@mui/icons-material/Coffee';
 const floatAnimation = keyframes`
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
-`;
-
-const gradientAnimation = keyframes`
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 `;
 
 const fadeInUp = {
@@ -106,9 +99,8 @@ const techStack = [
 function Footer() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [currentYear] = useState(new Date().getFullYear());
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

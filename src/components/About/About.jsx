@@ -11,7 +11,6 @@ import {
   ListItemIcon,
   ListItemText,
   useTheme,
-  useMediaQuery,
 } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SchoolIcon from '@mui/icons-material/School';
@@ -48,7 +47,6 @@ const staggerContainer = {
 
 function About() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Background colors for light/dark mode

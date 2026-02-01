@@ -12,7 +12,6 @@ import {
   Chip,
   IconButton,
   useTheme,
-  useMediaQuery,
   alpha,
   Dialog,
   DialogContent,
@@ -208,7 +207,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 function Projects() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 

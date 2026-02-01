@@ -12,7 +12,6 @@ import {
   Chip,
   IconButton,
   useTheme,
-  useMediaQuery,
   alpha,
   Dialog,
   DialogContent,
@@ -29,7 +28,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CodeIcon from '@mui/icons-material/Code';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import StorageIcon from '@mui/icons-material/Storage';
 
 // Custom animations
 const floatAnimation = keyframes`
@@ -199,7 +197,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 function Projects() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
