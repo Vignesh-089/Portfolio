@@ -4,7 +4,6 @@ import {
   Container,
   Typography,
   Grid,
-  LinearProgress,
   Paper,
   Chip,
   Tooltip,
@@ -181,7 +180,6 @@ const skillCategories = [
 
 function Skills() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   const paperBg = theme.palette.mode === 'dark'
